@@ -1,4 +1,10 @@
 <?php
+if(getenv('DEBUG') === 'TRUE') {
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
+}
+
 // Allow CORS for specific hosts
 $referer = $_SERVER['HTTP_REFERER'];
 $parsedUrl = parse_url($referer);
