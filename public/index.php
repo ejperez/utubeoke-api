@@ -10,15 +10,15 @@ $referer = $_SERVER['HTTP_REFERER'];
 
 var_dump($referer);
 
-$params = http_build_query([
-	'q' => $q,
-	'part' => 'snippet',
-	'key' => $apiKey,
-	'maxResults' => 10,
-	'type' => 'video'
-]);
+// $params = http_build_query([
+	// 'q' => $q,
+	// 'part' => 'snippet',
+	// 'key' => $apiKey,
+	// 'maxResults' => 10,
+	// 'type' => 'video'
+// ]);
 
-$response = file_get_contents('https://www.googleapis.com/youtube/v3/search?' . $params);
+// $response = file_get_contents('https://www.googleapis.com/youtube/v3/search?' . $params);
 
-header('Content-Type: application/json');
-echo $response;
+// header('Content-Type: application/json');
+// echo $response;
