@@ -1,4 +1,6 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+
 $apiKey = getenv('API_KEY');
 $q = $_GET['q'] ?? null;
 
