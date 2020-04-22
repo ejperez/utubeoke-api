@@ -14,7 +14,7 @@ $allowedHosts = getenv('ALLOWED_HOSTS');
 
 if($allowedHosts) {
 	if(in_array($parsedUrl, explode(',', $allowedHosts))) {
-		header('Access-Control-Allow-Origin: ' . $referer);
+		header('Access-Control-Allow-Origin: *');
 	}
 }
 
