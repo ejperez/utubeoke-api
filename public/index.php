@@ -11,7 +11,7 @@ if(!$apiKey || !$q) {
 $referer = $_SERVER['HTTP_REFERER'];
 $parsedUrl = parse_url($referer);
 
-var_dump($referer);
+var_dump($parsedUrl);
 
 // $params = http_build_query([
 	// 'q' => $q,
