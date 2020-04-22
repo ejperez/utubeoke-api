@@ -6,6 +6,10 @@ if(!$apiKey || !$q) {
 	die('<h1>It works!</h1>');
 }
 
+$referer = $_SERVER['HTTP_REFERER'];
+
+var_dump($referer);
+
 $params = http_build_query([
 	'q' => $q,
 	'part' => 'snippet',
