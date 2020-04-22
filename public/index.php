@@ -1,12 +1,4 @@
 <?php
-// Check if API key and q param are available
-$apiKey = getenv('API_KEY');
-$q = $_GET['q'] ?? null;
-
-if(!$apiKey || !$q) {
-	die('<h1>It works!</h1>');
-}
-
 // Allow CORS for specific hosts
 $referer = $_SERVER['HTTP_REFERER'];
 $parsedUrl = parse_url($referer);
@@ -16,6 +8,14 @@ if($allowedHosts) {
 	if(in_array($parsedUrl, explode(',', $allowedHosts))) {
 		header('Access-Control-Allow-Origin: *');
 	}
+}
+
+// Check if API key and q param are available
+$apiKey = getenv('API_KEY');
+$q = $_GET['q'] ?? null;
+
+if(!$apiKey || !$q) {
+	die('<h1>It works!</h1>');
 }
 
 // Do request
